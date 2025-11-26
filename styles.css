@@ -52,7 +52,7 @@ h1 {
     gap: 10px;
 }
 
-#email {
+#name {
     flex: 1;
     padding: 12px 12px;
     border: 1px solid #ddd;
@@ -61,7 +61,7 @@ h1 {
     transition: border-color 0.3s;
 }
 
-#email:focus {
+#name:focus {
     outline: none;
     border-color: #00a8ff;
 }
